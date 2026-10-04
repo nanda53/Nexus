@@ -1,4 +1,7 @@
-
+#!/bin/bash
+# Paste this into EC2 > Launch instance > Advanced details > User data
+# (Amazon Linux 2023, t3.small, security group allowing HTTP 80).
+# EDIT THE 3 LINES BELOW FIRST.
 
 REPO_URL="https://github.com/nanda53/nexus.git"
 DB_PASSWORD="NexusDemoPassword123"
