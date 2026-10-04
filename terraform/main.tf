@@ -1,8 +1,4 @@
-# Lite AWS deployment:
-#   CloudFront (HTTPS, global edge)  ->  EC2 (Docker Compose: nginx + React,
-#   FastAPI, PostgreSQL, Redis)
-# Everything is created by Terraform. Destroy it when you are done:
-#   terraform destroy
+
 terraform {
   required_providers {
     aws    = { source = "hashicorp/aws", version = "~> 5.0" }
@@ -17,7 +13,7 @@ variable "region" {
 
 variable "repo_url" {
   type        = string
-  description = "Public GitHub URL of this project, e.g. https://github.com/you/nexus.git"
+  description = "Public GitHub URL of this project, e.g. https://github.com/nanda53/nexus.git"
 }
 
 variable "instance_type" {

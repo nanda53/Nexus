@@ -1,11 +1,8 @@
-#!/bin/bash
-# Paste this into EC2 > Launch instance > Advanced details > User data
-# (Amazon Linux 2023, t3.small, security group allowing HTTP 80).
-# EDIT THE 3 LINES BELOW FIRST.
-REPO_URL="https://github.com/YOUR_USER/YOUR_REPO.git"
-DB_PASSWORD="ChangeThisPassword123"
-SECRET_KEY="change-this-to-a-long-random-string-0123456789abcdef"
 
+
+REPO_URL="https://github.com/nanda53/nexus.git"
+DB_PASSWORD="NexusDemoPassword123"
+SECRET_KEY="k8Jq2mZp7xWv4RtYb9NcL3sHd6FgA1eU5oPz"
 set -ex
 dnf install -y docker git
 systemctl enable --now docker
