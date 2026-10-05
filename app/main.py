@@ -26,12 +26,12 @@ async def lifespan(app: FastAPI):
         print(f"Seed notice: {e}")
     yield
 
-app = FastAPI(title="Core Banking API", lifespan=lifespan)
+app = FastAPI(title="Core Banking API", lifespan=lifespan, root_path=os.getenv("ROOT_PATH", ""))
 
 # In AWS the browser calls /api on the same origin (nginx), so CORS is not needed.
 # These are only for local development; add more via CORS_ORIGINS if required.
 allowed_origins = [
-    #"http://localhost:5173",
+    "http://localhost:5173",
     "http://localhost:3000",
 ]
 allowed_origins += [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]

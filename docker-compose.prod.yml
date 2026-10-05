@@ -27,6 +27,7 @@ services:
       DATABASE_URL: postgresql://postgres:${DB_PASSWORD}@db:5432/core_banking
       REDIS_URL: redis://redis:6379/0
       SECRET_KEY: ${SECRET_KEY}
+      ROOT_PATH: /api
     depends_on:
       db:
         condition: service_healthy
